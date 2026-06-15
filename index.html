@@ -28,7 +28,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,22,40,0.96);backdrop-fi
 .nav-links{display:flex;align-items:center;justify-content:center;gap:0.45rem;list-style:none;flex-wrap:wrap}
 .nav-links li a{color:var(--white3);font-size:16px;text-decoration:none;font-weight:600;transition:color 0.2s,background 0.2s,border-color 0.2s;padding:10px 16px;border-radius:999px;white-space:nowrap;border:1px solid transparent}
 .nav-links li a:hover{color:var(--gold2);background:rgba(201,168,76,0.09);border-color:rgba(201,168,76,0.18)}
-.nav-links li:first-child a{color:var(--gold3);background:rgba(201,168,76,0.1);border-color:rgba(201,168,76,0.24)}
+.nav-links li a.active{color:var(--gold3);background:rgba(201,168,76,0.1);border-color:rgba(201,168,76,0.24)}
 .nav-link-special{color:var(--gold3) !important;border:1px solid rgba(201,168,76,0.26);border-radius:999px !important}
 .nav-link-special:hover{border-color:rgba(201,168,76,0.52) !important;background:rgba(201,168,76,0.1) !important}
 .nav-cta{background:var(--gold);color:var(--navy) !important;padding:10px 18px !important;border-radius:999px !important;font-weight:600 !important;margin-left:8px;font-size:16px !important}
@@ -1578,6 +1578,27 @@ document.addEventListener('click',e=>{
 window.addEventListener('scroll',()=>{
   document.getElementById('btt').classList.toggle('show',window.scrollY>400);
 });
+const navItems=[...document.querySelectorAll('.nav-links a[href^="#"]')];
+const navSections=navItems.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
+function setActiveNav(id){
+  navItems.forEach(link=>link.classList.toggle('active',link.getAttribute('href')===`#${id}`));
+}
+function updateActiveNav(){
+  const offset=window.scrollY+120;
+  let current=navSections[0]?.id;
+  navSections.forEach(section=>{
+    if(section.offsetTop<=offset)current=section.id;
+  });
+  if(current)setActiveNav(current);
+}
+navItems.forEach(link=>{
+  link.addEventListener('click',()=>{
+    const targetId=link.getAttribute('href').slice(1);
+    setActiveNav(targetId);
+  });
+});
+window.addEventListener('scroll',updateActiveNav,{passive:true});
+window.addEventListener('load',updateActiveNav);
 function animateCounter(el){
   const t=parseInt(el.dataset.target)||0,pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';
   let c=0;const s=t/60;
