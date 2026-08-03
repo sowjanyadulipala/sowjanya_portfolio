@@ -67,7 +67,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,22,40,0.96);backdrop-fi
 .kpi-sub{font-size:10px;color:var(--green3);font-family:var(--mono);margin-top:3px}
 
 /* SECTIONS */
-section{padding:4.5rem 2rem}
+section{padding:4.5rem 2rem;scroll-margin-top:80px}
 .si{max-width:1200px;margin:0 auto}
 .stag{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:0.7rem;display:flex;align-items:center;gap:8px}
 .stag::before{content:'';display:block;width:20px;height:1px;background:var(--gold)}
@@ -108,7 +108,6 @@ section{padding:4.5rem 2rem}
 .experience-badge-title{font-size:13px;font-weight:600;color:var(--white);line-height:1.25}
 .experience-badge-sub{font-family:var(--mono);font-size:10px;color:var(--gold3);line-height:1.45;margin-top:3px}
 .tl-outer{max-width:1060px;margin:0 auto;position:relative}
-.tl-scale,.tl-row,.tl-flow,.tl-map,.tl-clean{display:none}
 .tl-exec{position:relative;max-width:1080px;margin:0 auto;display:grid;gap:12px}
 .tl-exec::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,rgba(201,168,76,0.5),rgba(201,168,76,0.13),rgba(201,168,76,0.24));transform:translateX(-50%)}
 .tl-exec-row{display:grid;grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);align-items:center;min-height:126px;position:relative}
@@ -151,84 +150,7 @@ section{padding:4.5rem 2rem}
 .tl-exec .tl-date{font-size:9.5px;margin-bottom:2px}
 .tl-exec .tl-role{font-size:13.5px;margin-bottom:1px;line-height:1.3}
 .tl-exec .tl-co{font-size:11.5px;margin-bottom:4px;line-height:1.38}
-.tl-exec .tl-ctx{font-size:10.8px;line-height:1.5;margin-bottom:0}
-.tl-clean{position:relative;max-width:1080px;margin:0 auto;display:none;gap:22px}
-.tl-clean::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,rgba(201,168,76,0.5),rgba(201,168,76,0.12),rgba(77,214,142,0.22));transform:translateX(-50%)}
-.tl-band{display:grid;grid-template-columns:minmax(0,1fr) 84px minmax(0,1fr);align-items:stretch;position:relative;min-height:180px}
-.tl-band.mba-band{min-height:540px}
-.tl-band.bach-band{min-height:640px}
-.tl-band.sri-band{min-height:220px}
-.tl-center{display:flex;flex-direction:column;align-items:center;gap:10px;z-index:3}
-.tl-marker{font-family:var(--mono);font-size:9px;color:var(--gold3);background:var(--navy);border:1px solid rgba(201,168,76,0.22);border-radius:3px;padding:3px 7px;white-space:nowrap}
-.tl-marker-dot{width:12px;height:12px;border-radius:50%;background:var(--gold);border:3px solid var(--navy);box-shadow:0 0 0 1px rgba(201,168,76,0.3)}
-.tl-center-line{width:1px;flex:1;background:rgba(201,168,76,0.13)}
-.tl-lane{display:flex;flex-direction:column;gap:24px;justify-content:center}
-.tl-lane.left{align-items:flex-end;padding-right:22px}
-.tl-lane.right{align-items:flex-start;padding-left:22px}
-.tl-lane.top{justify-content:flex-start;padding-top:10px}
-.tl-lane.mid{justify-content:center}
-.tl-lane.bottom{justify-content:flex-end;padding-bottom:18px}
-.tl-event{display:flex;align-items:center;gap:10px;width:min(100%,430px)}
-.tl-event.left{justify-content:flex-end}
-.tl-event.right{justify-content:flex-start}
-.tl-event.left .tl-soft-bracket{order:2}
-.tl-event.left .tl-card{order:1}
-.tl-event.right .tl-soft-bracket{order:1}
-.tl-event.right .tl-card{order:2}
-.tl-soft-bracket{width:34px;position:relative;flex:0 0 34px;min-height:100%;align-self:stretch}
-.tl-soft-bracket::before{content:'';position:absolute;top:18px;bottom:18px;left:50%;width:1px;background:repeating-linear-gradient(180deg,rgba(232,201,106,0.62) 0 4px,transparent 4px 9px)}
-.tl-soft-bracket::after{content:'';position:absolute;top:18px;bottom:18px;left:50%;width:18px;border-top:1px dashed rgba(232,201,106,0.42);border-bottom:1px dashed rgba(232,201,106,0.42);border-radius:14px;transform:translateX(-50%)}
-.tl-soft-bracket span{display:none}
-.tl-soft-bracket .b-end{top:0}
-.tl-soft-bracket .b-start{bottom:0}
-.tl-event.left .tl-soft-bracket span{right:24px}
-.tl-event.right .tl-soft-bracket span{left:24px}
-.tl-event.short .tl-soft-bracket{min-height:92px}
-.tl-event.med .tl-soft-bracket{min-height:150px}
-.tl-event.long .tl-soft-bracket{min-height:280px}
-.tl-event.xlong .tl-soft-bracket{min-height:430px}
-.tl-event .tl-card{width:100%}
-.tl-event.left .tl-card::before{right:-32px;width:32px}
-.tl-event.right .tl-card::before{left:-32px;width:32px}
-.tl-stack{display:flex;flex-direction:column;gap:30px;width:min(100%,430px)}
-.tl-stack .tl-event{width:100%}
-.tl-map{position:relative;display:none;grid-template-columns:minmax(280px,1fr) 34px 76px 34px minmax(250px,340px) 28px minmax(230px,310px);grid-template-rows:80px 115px 140px 80px 165px 130px 125px 170px 165px 120px 150px 170px 155px 165px 130px 190px 80px;column-gap:14px;max-width:1240px;margin:0 auto}
-.tl-map::before{content:'';grid-column:3;grid-row:1/-1;justify-self:center;width:1px;background:linear-gradient(180deg,rgba(201,168,76,0.52),rgba(201,168,76,0.14),rgba(77,214,142,0.26))}
-.tl-tick{grid-column:3;align-self:start;justify-self:center;z-index:2;display:flex;flex-direction:column;align-items:center;gap:4px}
-.tl-tick-dot{width:12px;height:12px;border-radius:50%;background:var(--gold);border:3px solid var(--navy);box-shadow:0 0 0 1px rgba(201,168,76,0.3)}
-.tl-tick span{font-family:var(--mono);font-size:9px;color:var(--gold3);background:var(--navy);border:1px solid rgba(201,168,76,0.22);border-radius:3px;padding:3px 6px;white-space:nowrap}
-.tl-map-card{align-self:center;z-index:3}
-.tl-map-card.left{grid-column:1;justify-self:end}
-.tl-map-card.right{grid-column:5;justify-self:start}
-.tl-map-card.right.alt{grid-column:7}
-.tl-map-card.left .tl-card::before{right:-40px;width:40px}
-.tl-map-card.right .tl-card::before{left:-40px;width:40px}
-.tl-rail{position:relative;z-index:2;align-self:stretch;justify-self:center;width:24px}
-.tl-rail.left{grid-column:2}
-.tl-rail.right{grid-column:4}
-.tl-rail.right.alt{grid-column:6}
-.tl-rail::before{content:'';position:absolute;top:10px;bottom:10px;left:50%;width:1px;background:repeating-linear-gradient(180deg,rgba(77,214,142,0.78) 0 4px,transparent 4px 9px);transform:translateX(-50%)}
-.tl-rail::after{content:'';position:absolute;top:10px;bottom:10px;left:50%;width:20px;border-top:1px dashed rgba(201,168,76,0.5);border-bottom:1px dashed rgba(201,168,76,0.5);border-radius:14px;transform:translateX(-50%)}
-.tl-rail span{position:absolute;font-family:var(--mono);font-size:9px;color:var(--gold3);background:rgba(10,22,40,0.96);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:2px 4px;white-space:nowrap}
-.tl-rail .end{top:0}
-.tl-rail .start{bottom:0}
-.tl-rail.left span{right:18px}
-.tl-rail.right span{left:18px}
-.tl-present{grid-row:1/3}.tl-sep25{grid-row:2/4}.tl-aug25{grid-row:3/4}.tl-mba-span{grid-row:5/10}.tl-ta-span{grid-row:5/9}.tl-hpcl{grid-row:6/8}.tl-sri23{grid-row:10/12}.tl-rallis{grid-row:12/15}.tl-bach{grid-row:13/18}.tl-sri19{grid-row:15/17}
-.tl-flow{position:relative;display:grid;gap:18px}
-.tl-flow::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,rgba(201,168,76,0.46),rgba(201,168,76,0.12),rgba(77,214,142,0.24));transform:translateX(-50%)}
-.tl-group{display:grid;grid-template-columns:minmax(0,1fr) 54px minmax(0,1fr);gap:0;align-items:stretch;position:relative}
-.tl-group.compact{min-height:230px}
-.tl-group.med{min-height:190px}
-.tl-group.long{min-height:430px}
-.tl-group.xlong{min-height:520px}
-.tl-spine{display:flex;flex-direction:column;align-items:center;position:relative;z-index:3}
-.tl-year{font-family:var(--mono);font-size:10px;color:var(--gold3);background:var(--navy);border:1px solid rgba(201,168,76,0.24);border-radius:3px;padding:4px 8px;letter-spacing:0.8px;margin-top:2px}
-.tl-dot{width:13px;height:13px;border-radius:50%;background:var(--gold);border:3px solid var(--navy);box-shadow:0 0 0 1px rgba(201,168,76,0.32);margin:8px 0}
-.tl-spine-line{width:1px;flex:1;background:rgba(201,168,76,0.16)}
-.tl-side{display:flex;flex-direction:column;gap:12px;justify-content:flex-start}
-.tl-side.left{align-items:flex-end;padding-right:18px}
-.tl-side.right{align-items:flex-start;padding-left:18px}
+.tl-exec .tl-ctx{font-size:12px;line-height:1.5;margin-bottom:0}
 .tl-card{width:min(100%,430px);background:var(--card);border:1px solid rgba(255,255,255,0.07);border-radius:6px;padding:1.1rem 1.2rem;position:relative;box-shadow:0 18px 45px rgba(0,0,0,0.11)}
 .tl-card::before{content:'';position:absolute;top:26px;width:18px;height:1px;background:rgba(201,168,76,0.32)}
 .tl-side.left .tl-card::before{right:-18px}
@@ -236,9 +158,6 @@ section{padding:4.5rem 2rem}
 .tl-card.tall{min-height:0}
 .tl-card.edu{border-color:rgba(77,214,142,0.26);background:linear-gradient(180deg,rgba(26,122,74,0.14),rgba(13,30,56,0.95))}
 .tl-card.current{border-color:rgba(201,168,76,0.34);background:linear-gradient(180deg,rgba(201,168,76,0.08),rgba(13,30,56,0.96))}
-.tl-substack{padding-top:96px}
-.tl-substack.low{padding-top:165px}
-.tl-offset-sep{margin-top:76px}
 .tl-label{display:inline-flex;width:max-content;max-width:100%;font-family:var(--mono);font-size:9px;color:var(--green3);letter-spacing:1px;text-transform:uppercase;background:rgba(26,122,74,0.13);border:1px solid rgba(77,214,142,0.18);border-radius:2px;padding:3px 6px;margin-bottom:8px}
 .tl-card.current .tl-label,.tl-label.gold{color:var(--gold3);background:rgba(201,168,76,0.1);border-color:rgba(201,168,76,0.22)}
 .tl-date{font-family:var(--mono);font-size:10px;color:var(--gold);letter-spacing:0.8px;margin-bottom:3px;text-transform:uppercase}
@@ -249,20 +168,6 @@ section{padding:4.5rem 2rem}
 .tl-bullets li{margin-bottom:2px}
 .tl-tools{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
 .tl-tool{font-size:10px;background:rgba(201,168,76,0.08);color:var(--gold3);padding:2px 6px;border-radius:2px;font-family:var(--mono)}
-.tl-duration{width:min(100%,430px);display:grid;grid-template-columns:1fr 42px;gap:10px;align-items:start;min-height:100%}
-.tl-duration .tl-card{width:100%}
-.tl-bracket{position:relative;align-self:stretch;min-height:100%;display:flex;justify-content:center}
-.tl-bracket::before{content:'';position:absolute;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--green3),rgba(201,168,76,0.78));border-radius:2px}
-.tl-bracket::after{content:'';position:absolute;top:8px;bottom:8px;width:18px;border-top:1px solid rgba(201,168,76,0.55);border-bottom:1px solid rgba(201,168,76,0.55)}
-.tl-bracket span{position:absolute;right:0;font-family:var(--mono);font-size:9px;color:var(--gold3);background:var(--navy);border:1px solid rgba(201,168,76,0.2);border-radius:2px;padding:2px 4px;white-space:nowrap}
-.tl-bracket .start{top:0}
-.tl-bracket .end{bottom:0}
-.tl-side.left .tl-duration{grid-template-columns:1fr 42px}
-.tl-side.right .tl-duration{grid-template-columns:42px 1fr}
-.tl-side.right .tl-duration .tl-bracket{grid-column:1;grid-row:1}
-.tl-side.right .tl-duration .tl-card{grid-column:2;grid-row:1}
-.tl-month{font-family:var(--mono);font-size:9px;color:var(--green3);letter-spacing:0.6px;margin-bottom:4px;text-transform:uppercase}
-.tl-flow{display:none}
 
 /* ─── PROJECTS ─── */
 .filter-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:1.8rem}
@@ -471,43 +376,17 @@ button.fbtn,
   .tl-exec-item.left .tl-connector,.tl-exec-item.right .tl-connector{order:1}
   .tl-connector{width:16px;flex-basis:16px;height:1px}
   .tl-connector::after{display:none}
-  .tl-clean{gap:16px}
-  .tl-clean::before{left:14px}
-  .tl-band,.tl-band.mba-band,.tl-band.bach-band,.tl-band.sri-band{display:block;min-height:0;padding-left:30px}
-  .tl-center{position:absolute;left:0;top:0;bottom:0;width:28px}
-  .tl-marker{display:none}
-  .tl-lane,.tl-lane.left,.tl-lane.right,.tl-lane.top,.tl-lane.mid,.tl-lane.bottom{align-items:stretch;padding:0;gap:12px}
-  .tl-event,.tl-event.left,.tl-event.right{width:100%;justify-content:flex-start}
-  .tl-event.left .tl-soft-bracket,.tl-event.right .tl-soft-bracket{order:1}
-  .tl-event.left .tl-card,.tl-event.right .tl-card{order:2}
-  .tl-soft-bracket{display:none}
-  .tl-event.left .tl-card::before,.tl-event.right .tl-card::before{left:-16px;right:auto;width:16px}
-  .tl-flow{gap:14px}
-  .tl-flow::before{left:14px}
-  .tl-map{display:none}
-  .tl-map::before{left:14px;grid-column:auto;position:absolute;top:0;bottom:0}
-  .tl-tick{display:none}
-  .tl-map-card,.tl-map-card.left,.tl-map-card.right,.tl-map-card.right.alt{display:block;margin:0 0 12px 30px}
-  .tl-map-card.left .tl-card::before,.tl-map-card.right .tl-card::before{left:-16px;right:auto;width:16px}
-  .tl-rail,.tl-rail.left,.tl-rail.right{display:none}
-  .tl-group,.tl-group.compact,.tl-group.med,.tl-group.long,.tl-group.xlong{grid-template-columns:28px 1fr;min-height:0}
-  .tl-spine{grid-column:1;grid-row:1;align-items:center}
-  .tl-year{font-size:9px;padding:3px 5px;writing-mode:vertical-rl;text-orientation:mixed}
-  .tl-side.left,.tl-side.right{grid-column:2;grid-row:1;align-items:stretch;padding:0 0 0 12px}
-  .tl-side:empty{display:none}
   .tl-card,.tl-card.tall{width:100%;min-height:0}
   .tl-card::before{left:-12px !important;right:auto;width:12px}
-  .tl-substack,.tl-substack.low{padding-top:0}
-  .tl-offset-sep{margin-top:0}
-  .tl-duration,.tl-side.left .tl-duration,.tl-side.right .tl-duration{width:100%;grid-template-columns:1fr}
-  .tl-duration .tl-card,.tl-side.right .tl-duration .tl-card{grid-column:1;grid-row:1}
-  .tl-bracket{grid-column:1 !important;grid-row:2 !important;min-height:78px;margin:8px 0 4px;justify-content:flex-start;padding-left:18px}
-  .tl-bracket::before{left:7px}
-  .tl-bracket::after{left:7px}
-  .tl-bracket span{right:auto;left:24px}
   .contact-panel{padding:2rem 1.25rem}
   .availability-grid{grid-template-columns:1fr}
   .find-links{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  section{padding-left:1rem;padding-right:1rem}
+  .hero{padding-left:1rem;padding-right:1rem}
+  .divider{margin-left:1rem;margin-right:1rem}
+  .proj-grid,.tk-grid,.roles-grid{grid-template-columns:minmax(0,1fr)}
 }
 </style>
 </head>
@@ -533,21 +412,25 @@ button.fbtn,
     <span>SG&A · Headcount · EBITDA Planning</span><span class="sep"> | </span>
     <span>$10M+ CapEx Analysis</span><span class="sep"> | </span>
     <span>20+ KPIs Consolidated</span><span class="sep"> | </span>
-    <span>SAP ERP Automation −25% Cycle Time</span><span class="sep"> | </span>
-    <span>Power BI · SQL · DAX · Tableau</span><span class="sep"> | </span>
+    <span>Excel + SAP ERP Standardization · 25% Faster Reporting</span><span class="sep"> | </span>
+    <span>Power BI · DAX · Tableau · Power Query</span><span class="sep"> | </span>
     <span>$110K Cost Savings Identified</span><span class="sep"> | </span>
     <span>Budget vs Actuals · Variance Analysis</span><span class="sep"> | </span>
-    <span>DCF · IRR · NPV · WACC · Sensitivity</span><span class="sep"> | </span>
-    <span>SaaS FP&A Control Tower</span><span class="sep"> | </span>
+    <span>DCF · IRR · NPV · Sensitivity</span><span class="sep"> | </span>
+    <span>SaaS FP&amp;A Control Tower</span><span class="sep"> | </span>
     <span>Hospital FP&A Source-to-Dashboard Pipeline</span><span class="sep"> | </span>
     <span>Rolling Forecast +10–15% Accuracy ↑</span><span class="sep"> | </span>
     <span>Revenue Planning &amp; Forecasting</span><span class="sep"> | </span>
     <span>SG&A · Headcount · EBITDA Planning</span><span class="sep"> | </span>
     <span>$10M+ CapEx Analysis</span><span class="sep"> | </span>
     <span>20+ KPIs Consolidated</span><span class="sep"> | </span>
-    <span>SAP ERP Automation −25% Cycle Time</span><span class="sep"> | </span>
-    <span>Power BI · SQL · DAX · Tableau</span><span class="sep"> | </span>
+    <span>Excel + SAP ERP Standardization · 25% Faster Reporting</span><span class="sep"> | </span>
+    <span>Power BI · DAX · Tableau · Power Query</span><span class="sep"> | </span>
     <span>$110K Cost Savings Identified</span><span class="sep"> | </span>
+    <span>Budget vs Actuals · Variance Analysis</span><span class="sep"> | </span>
+    <span>DCF · IRR · NPV · Sensitivity</span><span class="sep"> | </span>
+    <span>SaaS FP&amp;A Control Tower</span><span class="sep"> | </span>
+    <span>Hospital FP&amp;A Source-to-Dashboard Pipeline</span><span class="sep"> | </span>
   </div>
 </div>
 
@@ -563,23 +446,23 @@ button.fbtn,
     <span class="badge">Financial Modeling</span>
     <span class="badge">Power BI</span>
     <span class="badge">Advanced Excel</span>
-    <span class="badge">SAP ERP</span>
+    <span class="badge">Budgeting &amp; Forecasting</span>
   </div>
   <h1>Building forecasts, <em>financial models,</em><br>and executive insights that turn<br>data into decisions.</h1>
   <p class="hero-sub">I help leaders understand performance, control costs, and plan with confidence through driver-based forecasting, variance analysis, financial modeling, and KPI reporting.</p>
   <div class="hero-btns">
-    <a href="https://drive.google.com/drive/folders/1OdOHKE3XHNh-TaUhQtGdM3-8NRBGO0b8?usp=drive_link" class="btn-p" target="_blank" rel="noopener noreferrer">View Resume</a>
+    <a href="https://drive.google.com/uc?export=download&id=1OdOHKE3XHNh-TaUhQtGdM3-8NRBGO0b8" class="btn-p" target="_blank" rel="noopener noreferrer">View Resume</a>
     <a href="#projects" class="btn-o">View Projects</a>
     <a href="https://www.linkedin.com/in/sowjanyadulipala/" class="btn-o" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     <a href="https://calendar.app.google/4nPzZkZxuHpne2iVA" class="btn-g" target="_blank" rel="noopener noreferrer">Book 15-Min Intro Call</a>
   </div>
   <div class="kpi-grid">
     <div class="kpi-card"><div class="kpi-val" data-target="4" data-suffix="+">0</div><div class="kpi-label">Years Finance Experience</div><div class="kpi-sub">FP&A · Capital · Commercial</div></div>
-    <div class="kpi-card"><div class="kpi-val" data-prefix="$" data-target="40" data-suffix="M+">0</div><div class="kpi-label">Revenue Planning Exposure</div><div class="kpi-sub">Rolling 12-Month Forecast</div></div>
+    <div class="kpi-card"><div class="kpi-val" data-target="5" data-suffix="+">0</div><div class="kpi-label">Business Functions Supported</div><div class="kpi-sub">Forecasting · Reporting · Planning</div></div>
     <div class="kpi-card"><div class="kpi-val" data-prefix="$" data-target="10" data-suffix="M+">0</div><div class="kpi-label">Capital Project Analysis</div><div class="kpi-sub">DCF · IRR · NPV</div></div>
     <div class="kpi-card"><div class="kpi-val" data-target="20" data-suffix="+">0</div><div class="kpi-label">KPIs Consolidated</div><div class="kpi-sub">Power BI · Tableau</div></div>
     <div class="kpi-card"><div class="kpi-val" data-prefix="+" data-target="15" data-suffix="%">0</div><div class="kpi-label">Forecast Accuracy Lift</div><div class="kpi-sub">Driver-Based Model</div></div>
-    <div class="kpi-card"><div class="kpi-val" data-target="25" data-suffix="%">0</div><div class="kpi-label">Reporting Cycle Reduction</div><div class="kpi-sub">SAP ERP Automation</div></div>
+    <div class="kpi-card"><div class="kpi-val" data-target="25" data-suffix="%">0</div><div class="kpi-label">Reporting Cycle Reduction</div><div class="kpi-sub">Excel + SAP ERP Standardization</div></div>
     <div class="kpi-card"><div class="kpi-val" data-prefix="$" data-target="110" data-suffix="K">0</div><div class="kpi-label">Cost Savings Identified</div><div class="kpi-sub">Vendor Renegotiation</div></div>
     <div class="kpi-card"><div class="kpi-val" data-target="95" data-suffix="%">0</div><div class="kpi-label">Forecast Accuracy</div><div class="kpi-sub">Territory Revenue Planning</div></div>
   </div>
@@ -597,7 +480,7 @@ button.fbtn,
     <div class="snap-card"><div class="snap-lbl">ROLE FOCUS</div><div class="snap-val">FP&A Analyst · Financial Analyst · Senior Financial Analyst</div></div>
     <div class="snap-card"><div class="snap-lbl">EXPERIENCE</div><div class="snap-val">4+ years; FP&A, capital projects, commercial finance</div></div>
     <div class="snap-card"><div class="snap-lbl">EDUCATION</div><div class="snap-val">MBA Finance, UC Riverside · GPA 3.76/4.00</div></div>
-    <div class="snap-card"><div class="snap-lbl">TOOLS</div><div class="snap-val">Advanced Excel · Power BI · SQL · Tableau · SAP ERP</div></div>
+    <div class="snap-card"><div class="snap-lbl">TOOLS</div><div class="snap-val">Advanced Excel · Power BI · Tableau · Foundational SAP ERP &amp; SQL</div></div>
     <div class="snap-card"><div class="snap-lbl">STRONGEST SKILLS</div><div class="snap-val">Forecasting · Variance Analysis · Financial Modeling · Dashboarding</div></div>
     <div class="snap-card"><div class="snap-lbl">TARGET INDUSTRIES</div><div class="snap-val">Healthcare · Energy · Technology</div></div>
     <div class="snap-card"><div class="snap-lbl">LOCATION</div><div class="snap-val">Denton, TX / DFW Metro · Open to relocation nationwide</div></div>
@@ -618,13 +501,13 @@ button.fbtn,
       <div class="about-stats">
         <div class="astat"><div class="astat-n">4+</div><div class="astat-t">Years across FP&A, capital planning, and commercial finance</div></div>
         <div class="astat"><div class="astat-n">3.76</div><div class="astat-t">MBA Finance GPA out of 4.00, UC Riverside</div></div>
-        <div class="astat"><div class="astat-n">$40M+</div><div class="astat-t">Revenue planning exposure</div></div>
+        <div class="astat"><div class="astat-n">5+</div><div class="astat-t">Business functions supported</div></div>
       </div>
     </div>
     <div class="about-text">
-      <p>I build financial planning systems not just reports. The infrastructure that helps leadership forecast performance, track variances, and make decisions with real numbers.</p>
-      <p>My work connects <strong>forecasting, financial modeling, and executive reporting</strong> to business decisions. At Digital Factory, I built the FP&A function from scratch across rolling 12-month forecasts, P&amp;L/EBITDA reporting, headcount and SG&amp;A planning, executive KPI dashboards, and strategic finance models supporting fundraising, capital allocation, and long-range planning. At HPCL I led $10M+ capital project appraisals using DCF and IRR analysis. At Rallis India (Tata) I ran territory-level revenue forecasting and A/R management across 50+ accounts.</p>
-      <p>I'm targeting <strong>FP&A, Financial Analyst, and Corporate Finance roles</strong> in healthcare, energy, and technology industries where financial planning moves real outcomes.</p>
+      <p>I build financial planning systems, not just reports. My work helps leaders forecast performance, understand variances, control costs, and make decisions using clear financial and operational data.</p>
+      <p>My experience connects <strong>forecasting, financial modeling, and executive reporting</strong> to business decisions. At Digital Factory, I built rolling 12-month forecasts, P&amp;L and EBITDA reporting, headcount and SG&amp;A planning, Power BI dashboards, and five-year scenario models. At HPCL, I evaluated five capital projects totaling $10M+ using DCF, NPV, IRR, and sensitivity analysis while improving reporting efficiency through standardized Excel templates and SAP ERP data. At Rallis India, I supported territory revenue forecasting, pricing analysis, and A/R performance across 50+ accounts.</p>
+      <p>I’m targeting <strong>FP&A, Financial Analyst, and Corporate Finance roles</strong> in healthcare, energy, and technology where strong financial planning supports better decisions.</p>
     </div>
   </div>
 </div>
@@ -648,7 +531,7 @@ button.fbtn,
       </div>
     </div>
   </div>
-  <p class="sdesc">Latest-to-oldest career path with normal content cards, month-level markers, and separate duration brackets for long overlapping periods.</p>
+  <p class="sdesc">A finance career spanning FP&amp;A, commercial finance, capital planning, and investment analysis.</p>
 
   <div class="tl-outer">
 
@@ -657,11 +540,11 @@ button.fbtn,
         <div class="tl-exec-side left">
           <div class="tl-exec-item left d-present" data-start="sep-2025" data-end="present-2026">
             <article class="tl-card current">
-              <div class="tl-label gold">Current Role</div>
+              <div class="tl-label gold">Current FP&A Role</div>
               <div class="tl-date">Sep 2025 - Present</div>
-              <div class="tl-role">Financial Analyst / FP&A & Reporting</div>
-              <div class="tl-co">Digital Factory - Data Analytics &amp; Location Intelligence</div>
-              <div class="tl-ctx">Built the FP&A function from scratch for a patented B2B data analytics platform, including rolling 12-month forecasts, P&amp;L/EBITDA reporting, headcount and SG&amp;A planning, executive KPI dashboards, and strategic finance models supporting a $2.5B growth strategy.</div>
+              <div class="tl-role">Financial Analyst | FP&A & Reporting</div>
+              <div class="tl-co">Digital Factory | Data Analytics &amp; Location Intelligence</div>
+              <div class="tl-ctx">Built core FP&A processes for a B2B data analytics and location intelligence company, including rolling 12-month forecasts, P&amp;L and EBITDA reporting, headcount and SG&amp;A planning, Power BI dashboards, and five-year scenario modeling.</div>
             </article>
             <div class="tl-connector"></div>
           </div>
@@ -679,9 +562,9 @@ button.fbtn,
             <article class="tl-card">
               <div class="tl-label gold">Investment Analysis</div>
               <div class="tl-date">Aug 2025 - Sep 2025</div>
-              <div class="tl-role">Deal Sourcing & Investment Analyst Intern</div>
+              <div class="tl-role">Stack Leader | Deal Sourcing & Investment Analysis</div>
               <div class="tl-co">Ridgeview Holdings Group - Private Equity</div>
-              <div class="tl-ctx">Sourced and evaluated healthcare, tech, and essential services investment opportunities using DCF, IRR, and comparable company analysis.</div>
+              <div class="tl-ctx">Sourced and screened 150+ private-equity opportunities across healthcare, technology, and real estate using financial, market, and strategic-fit criteria. Prepared investment memos and early-stage due diligence analyses supporting deal-structuring decisions.</div>
             </article>
           </div>
         </div>
@@ -708,9 +591,9 @@ button.fbtn,
               <article class="tl-card">
                 <div class="tl-label">Concurrent With MBA</div>
                 <div class="tl-date">Apr 2024 - Jun 2025</div>
-                <div class="tl-role">Graduate Teaching Assistant - Finance</div>
+                <div class="tl-role">Graduate Teaching Assistant & Reader</div>
                 <div class="tl-co">University of California, Riverside</div>
-                <div class="tl-ctx">Trained 200+ undergraduates in Excel-based financial modeling, DCF valuation, budgeting, and FP&A reporting.</div>
+                <div class="tl-ctx">Supported instruction, grading, and student feedback across BIOL 05LA, BUS 100W, and SOC 134 for 200+ students over multiple academic terms. Managed grading records and course workflows while meeting faculty quality and turnaround requirements.</div>
               </article>
             </div>
             <div class="tl-exec-item right d-hpcl" data-start="jul-2024" data-end="aug-2024">
@@ -720,7 +603,7 @@ button.fbtn,
                 <div class="tl-date">Jul 2024 - Aug 2024</div>
                 <div class="tl-role">Financial Analyst Intern - Capital Projects</div>
                 <div class="tl-co">Hindustan Petroleum Corporation Limited</div>
-                <div class="tl-ctx">Led $10M+ capital project appraisal using DCF, IRR/NPV, scenario analysis, and SAP ERP reporting automation.</div>
+                <div class="tl-ctx">Evaluated five capital projects totaling $10M+ using DCF, NPV, IRR, and sensitivity analysis; reduced reporting time by 25% by standardizing Excel templates and consolidating SAP ERP data.</div>
               </article>
             </div>
           </div>
@@ -752,7 +635,7 @@ button.fbtn,
               <div class="tl-date">Jun 2016 - Jun 2020</div>
               <div class="tl-role">Bachelor of Science</div>
               <div class="tl-co">Centurion University of Technology and Management</div>
-              <div class="tl-ctx">Undergraduate foundation that overlaps with early finance experience in 2019 and ends at Jun 2020.</div>
+              <div class="tl-ctx">GPA: 3.9/4.0</div>
             </article>
             <div class="tl-connector"></div>
           </div>
@@ -785,595 +668,34 @@ button.fbtn,
       </div>
     </div>
 
-    <div class="tl-clean" aria-label="Clean experience timeline from present to 2016">
-      <div class="tl-band">
-        <div class="tl-lane left">
-          <div class="tl-event left med">
-            <article class="tl-card current">
-              <div class="tl-label gold">Current Role</div>
-              <div class="tl-date">Sep 2025 - Present</div>
-              <div class="tl-role">Financial Analyst / FP&A & Reporting</div>
-              <div class="tl-co">Digital Factory - Data Analytics &amp; Location Intelligence</div>
-              <div class="tl-ctx">Built the FP&A function from scratch for a patented B2B data analytics platform, including rolling 12-month forecasts, P&amp;L/EBITDA reporting, headcount and SG&amp;A planning, executive KPI dashboards, and strategic finance models supporting a $2.5B growth strategy.</div>
-            </article>
-            <div class="tl-soft-bracket"><span class="b-end">Present</span><span class="b-start">Sep 2025</span></div>
-          </div>
-        </div>
-        <div class="tl-center"><div class="tl-marker">Present</div><div class="tl-marker-dot"></div><div class="tl-center-line"></div><div class="tl-marker">Sep 2025</div></div>
-        <div class="tl-lane right"></div>
-      </div>
+    
 
-      <div class="tl-band">
-        <div class="tl-lane left"></div>
-        <div class="tl-center"><div class="tl-marker">Aug 2025</div><div class="tl-marker-dot"></div><div class="tl-center-line"></div></div>
-        <div class="tl-lane right">
-          <div class="tl-event right short">
-            <div class="tl-soft-bracket"><span class="b-end">Sep 2025</span><span class="b-start">Aug 2025</span></div>
-            <article class="tl-card">
-              <div class="tl-label gold">Investment Analysis</div>
-              <div class="tl-date">Aug 2025 - Sep 2025</div>
-              <div class="tl-role">Deal Sourcing & Investment Analyst Intern</div>
-              <div class="tl-co">Ridgeview Holdings Group - Private Equity</div>
-              <div class="tl-ctx">Sourced and evaluated healthcare, tech, and essential services investment opportunities using DCF, IRR, and comparable company analysis.</div>
-            </article>
-          </div>
-        </div>
-      </div>
+    
 
-      <div class="tl-band mba-band">
-        <div class="tl-lane left mid">
-          <div class="tl-event left xlong">
-            <article class="tl-card edu">
-              <div class="tl-label">Education</div>
-              <div class="tl-date">Apr 2023 - Jun 2025</div>
-              <div class="tl-role">MBA Finance</div>
-              <div class="tl-co">University of California, Riverside</div>
-              <div class="tl-ctx">GPA 3.76/4.00. Corporate Finance, Investments & Portfolio Management, Fixed Income, International Financial Management, and Spreadsheet Modeling.</div>
-            </article>
-            <div class="tl-soft-bracket"><span class="b-end">Jun 2025</span><span class="b-start">Apr 2023</span></div>
-          </div>
-        </div>
-        <div class="tl-center"><div class="tl-marker">Jun 2025</div><div class="tl-marker-dot"></div><div class="tl-center-line"></div><div class="tl-marker">Apr 2024</div><div class="tl-center-line"></div><div class="tl-marker">Jul 2024</div><div class="tl-center-line"></div><div class="tl-marker">Apr 2023</div></div>
-        <div class="tl-lane right mid">
-          <div class="tl-stack">
-            <div class="tl-event right long">
-              <div class="tl-soft-bracket"><span class="b-end">Jun 2025</span><span class="b-start">Apr 2024</span></div>
-              <article class="tl-card">
-                <div class="tl-label">Concurrent With MBA</div>
-                <div class="tl-date">Apr 2024 - Jun 2025</div>
-                <div class="tl-role">Graduate Teaching Assistant - Finance</div>
-                <div class="tl-co">University of California, Riverside</div>
-                <div class="tl-ctx">Trained 200+ undergraduates in Excel-based financial modeling, DCF valuation, budgeting, and FP&A reporting.</div>
-              </article>
-            </div>
-            <div class="tl-event right short">
-              <div class="tl-soft-bracket"><span class="b-end">Aug 2024</span><span class="b-start">Jul 2024</span></div>
-              <article class="tl-card">
-                <div class="tl-label gold">MBA Summer Internship</div>
-                <div class="tl-date">Jul 2024 - Aug 2024</div>
-                <div class="tl-role">Financial Analyst Intern - Capital Projects</div>
-                <div class="tl-co">Hindustan Petroleum Corporation Limited</div>
-                <div class="tl-ctx">Led $10M+ capital project appraisal using DCF, IRR/NPV, scenario analysis, and SAP ERP reporting automation.</div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
+    
 
-      <div class="tl-band sri-band">
-        <div class="tl-lane left"></div>
-        <div class="tl-center"><div class="tl-marker">Mar 2023</div><div class="tl-marker-dot"></div><div class="tl-center-line"></div><div class="tl-marker">Jul 2022</div></div>
-        <div class="tl-lane right">
-          <div class="tl-event right med">
-            <div class="tl-soft-bracket"><span class="b-end">Mar 2023</span><span class="b-start">Jul 2022</span></div>
-            <article class="tl-card">
-              <div class="tl-label">FP&A / Capital Planning</div>
-              <div class="tl-date">Jul 2022 - Mar 2023</div>
-              <div class="tl-role">FP&A Analyst / Strategy & Capital Planning</div>
-              <div class="tl-co">Sri Sowdha Ventures - Private Investment & Development</div>
-              <div class="tl-ctx">Project-level investment analysis and budget-to-actual tracking across concurrent construction projects.</div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-band bach-band">
-        <div class="tl-lane left mid">
-          <div class="tl-event left xlong">
-            <article class="tl-card edu">
-              <div class="tl-label">Education</div>
-              <div class="tl-date">Jun 2016 - Jun 2020</div>
-              <div class="tl-role">Bachelor of Science</div>
-              <div class="tl-co">Centurion University of Technology and Management</div>
-              <div class="tl-ctx">Undergraduate foundation that overlaps with early finance experience in 2019 and ends at Jun 2020.</div>
-            </article>
-            <div class="tl-soft-bracket"><span class="b-end">Jun 2020</span><span class="b-start">Jun 2016</span></div>
-          </div>
-        </div>
-        <div class="tl-center"><div class="tl-marker">Jun 2022</div><div class="tl-marker-dot"></div><div class="tl-center-line"></div><div class="tl-marker">Jan 2020</div><div class="tl-center-line"></div><div class="tl-marker">Jun 2020</div><div class="tl-center-line"></div><div class="tl-marker">Jan 2019</div><div class="tl-center-line"></div><div class="tl-marker">Jun 2016</div></div>
-        <div class="tl-lane right mid">
-          <div class="tl-stack">
-            <div class="tl-event right long">
-              <div class="tl-soft-bracket"><span class="b-end">Jun 2022</span><span class="b-start">Jan 2020</span></div>
-              <article class="tl-card">
-                <div class="tl-label gold">Commercial Finance</div>
-                <div class="tl-date">Jan 2020 - Jun 2022</div>
-                <div class="tl-role">Territory Executive / Commercial Finance</div>
-                <div class="tl-co">Rallis India Limited - Tata Enterprise</div>
-                <div class="tl-ctx">Revenue forecasting, A/R management, and pricing strategy across 50+ commercial accounts.</div>
-              </article>
-            </div>
-            <div class="tl-event right med">
-              <div class="tl-soft-bracket"><span class="b-end">Dec 2019</span><span class="b-start">Jan 2019</span></div>
-              <article class="tl-card">
-                <div class="tl-label">Early Finance Experience</div>
-                <div class="tl-date">Jan 2019 - Dec 2019</div>
-                <div class="tl-role">Financial Analyst</div>
-                <div class="tl-co">Sri Sowdha Ventures</div>
-                <div class="tl-ctx">Early finance role during the Bachelor's period, focused on analytical support for business planning and project economics.</div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="tl-map" aria-label="Month-based experience and education timeline from present to 2016">
-      <div class="tl-tick" style="grid-row:1"><div class="tl-tick-dot"></div><span>Present</span></div>
-      <div class="tl-tick" style="grid-row:2"><div class="tl-tick-dot"></div><span>Sep 2025</span></div>
-      <div class="tl-tick" style="grid-row:3"><div class="tl-tick-dot"></div><span>Aug 2025</span></div>
-      <div class="tl-tick" style="grid-row:5"><div class="tl-tick-dot"></div><span>Jun 2025</span></div>
-      <div class="tl-tick" style="grid-row:6"><div class="tl-tick-dot"></div><span>Aug 2024</span></div>
-      <div class="tl-tick" style="grid-row:7"><div class="tl-tick-dot"></div><span>Jul 2024</span></div>
-      <div class="tl-tick" style="grid-row:8"><div class="tl-tick-dot"></div><span>Apr 2024</span></div>
-      <div class="tl-tick" style="grid-row:9"><div class="tl-tick-dot"></div><span>Apr 2023</span></div>
-      <div class="tl-tick" style="grid-row:10"><div class="tl-tick-dot"></div><span>Mar 2023</span></div>
-      <div class="tl-tick" style="grid-row:11"><div class="tl-tick-dot"></div><span>Jul 2022</span></div>
-      <div class="tl-tick" style="grid-row:12"><div class="tl-tick-dot"></div><span>Jun 2022</span></div>
-      <div class="tl-tick" style="grid-row:13"><div class="tl-tick-dot"></div><span>Jun 2020</span></div>
-      <div class="tl-tick" style="grid-row:14"><div class="tl-tick-dot"></div><span>Jan 2020</span></div>
-      <div class="tl-tick" style="grid-row:15"><div class="tl-tick-dot"></div><span>Dec 2019</span></div>
-      <div class="tl-tick" style="grid-row:16"><div class="tl-tick-dot"></div><span>Jan 2019</span></div>
-      <div class="tl-tick" style="grid-row:17"><div class="tl-tick-dot"></div><span>Jun 2016</span></div>
-
-      <div class="tl-rail left tl-present"><span class="end">Present</span><span class="start">Sep 2025</span></div>
-      <div class="tl-map-card left tl-present">
-        <article class="tl-card current">
-          <div class="tl-label gold">Current Role</div>
-          <div class="tl-date">Sep 2025 - Present</div>
-          <div class="tl-role">Financial Analyst / FP&A & Reporting</div>
-          <div class="tl-co">Digital Factory - Data Analytics &amp; Location Intelligence</div>
-          <div class="tl-ctx">Built the FP&A function from scratch for a patented B2B data analytics platform, including rolling 12-month forecasts, P&amp;L/EBITDA reporting, headcount and SG&amp;A planning, executive KPI dashboards, and strategic finance models supporting a $2.5B growth strategy.</div>
-        </article>
-      </div>
-
-      <div class="tl-rail right tl-sep25"><span class="end">Sep 2025</span><span class="start">Aug 2025</span></div>
-      <div class="tl-map-card right tl-sep25">
-        <article class="tl-card">
-          <div class="tl-label gold">Investment Analysis</div>
-          <div class="tl-date">Aug 2025 - Sep 2025</div>
-          <div class="tl-role">Deal Sourcing & Investment Analyst Intern</div>
-          <div class="tl-co">Ridgeview Holdings Group - Private Equity</div>
-          <div class="tl-ctx">Sourced and evaluated healthcare, tech, and essential services investment opportunities using DCF, IRR, and comparable company analysis.</div>
-        </article>
-      </div>
-
-      <div class="tl-rail left tl-mba-span"><span class="end">Jun 2025</span><span class="start">Apr 2023</span></div>
-      <div class="tl-map-card left tl-mba-span">
-        <article class="tl-card edu">
-          <div class="tl-label">Education</div>
-          <div class="tl-date">Apr 2023 - Jun 2025</div>
-          <div class="tl-role">MBA Finance</div>
-          <div class="tl-co">University of California, Riverside</div>
-          <div class="tl-ctx">GPA 3.76/4.00. Corporate Finance, Investments & Portfolio Management, Fixed Income, International Financial Management, and Spreadsheet Modeling.</div>
-        </article>
-      </div>
-
-      <div class="tl-rail right tl-ta-span"><span class="end">Jun 2025</span><span class="start">Apr 2024</span></div>
-      <div class="tl-map-card right tl-ta-span">
-        <article class="tl-card">
-          <div class="tl-label">Concurrent With MBA</div>
-          <div class="tl-date">Apr 2024 - Jun 2025</div>
-          <div class="tl-role">Graduate Teaching Assistant - Finance</div>
-          <div class="tl-co">University of California, Riverside</div>
-          <div class="tl-ctx">Trained 200+ undergraduates in Excel-based financial modeling, DCF valuation, budgeting, and FP&A reporting.</div>
-        </article>
-      </div>
-
-      <div class="tl-rail right alt tl-hpcl"><span class="end">Aug 2024</span><span class="start">Jul 2024</span></div>
-      <div class="tl-map-card right alt tl-hpcl">
-        <article class="tl-card">
-          <div class="tl-label gold">MBA Summer Internship</div>
-          <div class="tl-date">Jul 2024 - Aug 2024</div>
-          <div class="tl-role">Financial Analyst Intern - Capital Projects</div>
-          <div class="tl-co">Hindustan Petroleum Corporation Limited</div>
-          <div class="tl-ctx">Led $10M+ capital project appraisal using DCF, IRR/NPV, scenario analysis, and SAP ERP reporting automation.</div>
-        </article>
-      </div>
-
-      <div class="tl-rail right tl-sri23"><span class="end">Mar 2023</span><span class="start">Jul 2022</span></div>
-      <div class="tl-map-card right tl-sri23">
-        <article class="tl-card">
-          <div class="tl-label">FP&A / Capital Planning</div>
-          <div class="tl-date">Jul 2022 - Mar 2023</div>
-          <div class="tl-role">FP&A Analyst / Strategy & Capital Planning</div>
-          <div class="tl-co">Sri Sowdha Ventures - Private Investment & Development</div>
-          <div class="tl-ctx">Project-level investment analysis and budget-to-actual tracking across concurrent construction projects.</div>
-        </article>
-      </div>
-
-      <div class="tl-rail right tl-rallis"><span class="end">Jun 2022</span><span class="start">Jan 2020</span></div>
-      <div class="tl-map-card right tl-rallis">
-        <article class="tl-card">
-          <div class="tl-label gold">Commercial Finance</div>
-          <div class="tl-date">Jan 2020 - Jun 2022</div>
-          <div class="tl-role">Territory Executive / Commercial Finance</div>
-          <div class="tl-co">Rallis India Limited - Tata Enterprise</div>
-          <div class="tl-ctx">Revenue forecasting, A/R management, and pricing strategy across 50+ commercial accounts.</div>
-        </article>
-      </div>
-
-      <div class="tl-rail left tl-bach"><span class="end">Jun 2020</span><span class="start">Jun 2016</span></div>
-      <div class="tl-map-card left tl-bach">
-        <article class="tl-card edu">
-          <div class="tl-label">Education</div>
-          <div class="tl-date">Jun 2016 - Jun 2020</div>
-          <div class="tl-role">Bachelor of Science</div>
-          <div class="tl-co">Centurion University of Technology and Management</div>
-          <div class="tl-ctx">Undergraduate foundation that overlaps with early finance experience in 2019 and ends at Jun 2020.</div>
-        </article>
-      </div>
-
-      <div class="tl-rail right tl-sri19"><span class="end">Dec 2019</span><span class="start">Jan 2019</span></div>
-      <div class="tl-map-card right tl-sri19">
-        <article class="tl-card">
-          <div class="tl-label">Early Finance Experience</div>
-          <div class="tl-date">Jan 2019 - Dec 2019</div>
-          <div class="tl-role">Financial Analyst</div>
-          <div class="tl-co">Sri Sowdha Ventures</div>
-          <div class="tl-ctx">Early finance role during the Bachelor's period, focused on analytical support for business planning and project economics.</div>
-        </article>
-      </div>
-    </div>
-
-    <div class="tl-flow" aria-label="Experience and education timeline from 2025 to 2016">
-      <div class="tl-group compact">
-        <div class="tl-side left">
-          <article class="tl-card">
-            <div class="tl-label gold">Investment Analysis</div>
-            <div class="tl-date">Aug 2025 - Sep 2025</div>
-            <div class="tl-role">Deal Sourcing & Investment Analyst Intern</div>
-            <div class="tl-co">Ridgeview Holdings Group - Private Equity</div>
-            <div class="tl-ctx">Healthcare, tech, and essential services deal sourcing and early-stage due diligence for a $10M+ fund raise.</div>
-            <div class="tl-tools"><span class="tl-tool">DCF</span><span class="tl-tool">Comps</span><span class="tl-tool">IRR</span></div>
-          </article>
-        </div>
-        <div class="tl-spine"><div class="tl-year">Aug 2025</div><div class="tl-dot"></div><div class="tl-spine-line"></div><div class="tl-year">Sep 2025</div><div class="tl-dot"></div><div class="tl-spine-line"></div></div>
-        <div class="tl-side right">
-          <article class="tl-card current tl-offset-sep">
-            <div class="tl-label gold">Current Role</div>
-            <div class="tl-date">Sep 2025 - Present</div>
-            <div class="tl-role">Financial Analyst / FP&A & Reporting</div>
-            <div class="tl-co">Digital Factory - Data Analytics &amp; Location Intelligence</div>
-            <div class="tl-ctx">Built the FP&A function from scratch for a patented B2B data analytics platform, including rolling 12-month forecasts, P&amp;L/EBITDA reporting, headcount and SG&amp;A planning, executive KPI dashboards, and strategic finance models supporting a $2.5B growth strategy.</div>
-            <ul class="tl-bullets">
-              <li>Architected rolling 12-month forecasts, P&amp;L/EBITDA reporting, and headcount/SG&amp;A planning across 5+ business units; consolidated 20+ KPIs into Power BI executive dashboards.</li>
-              <li>Developed a 5-year strategic finance model for a $2.5B growth strategy, integrating revenue forecasts, customer growth drivers, DCF valuation, and 3-scenario sensitivity analysis to support fundraising, capital allocation, and long-range planning.</li>
-              <li>Established a dynamic sales finance model integrating HubSpot pipeline data, commission targets, and deal volume forecasts, standardizing monthly revenue forecasting, compensation tracking, and sales performance reviews across a 6-member sales team.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-
-      <div class="tl-group long">
-        <div class="tl-side left">
-          <div class="tl-duration">
-            <article class="tl-card edu">
-              <div class="tl-label">Education</div>
-              <div class="tl-date">Apr 2023 - Jun 2025</div>
-              <div class="tl-role">MBA Finance</div>
-              <div class="tl-co">University of California, Riverside</div>
-              <div class="tl-ctx">GPA 3.76/4.00. Corporate Finance, Investments & Portfolio Management, Fixed Income, International Financial Management, and Spreadsheet Modeling.</div>
-            </article>
-            <div class="tl-bracket" aria-label="MBA duration from Apr 2023 to Jun 2025"><span class="start">Jun 2025</span><span class="end">Apr 2023</span></div>
-          </div>
-        </div>
-        <div class="tl-spine"><div class="tl-year">Jun 2025</div><div class="tl-dot"></div><div class="tl-spine-line"></div><div class="tl-year">Jul 2024</div><div class="tl-dot"></div><div class="tl-spine-line"></div><div class="tl-year">Apr 2024</div><div class="tl-dot"></div><div class="tl-spine-line"></div><div class="tl-year">Apr 2023</div><div class="tl-dot"></div><div class="tl-spine-line"></div></div>
-        <div class="tl-side right tl-substack">
-          <article class="tl-card">
-            <div class="tl-label">Concurrent With MBA</div>
-            <div class="tl-month">Apr 2024 to Jun 2025</div>
-            <div class="tl-date">Apr 2024 - Jun 2025</div>
-            <div class="tl-role">Graduate Teaching Assistant - Finance</div>
-            <div class="tl-co">University of California, Riverside</div>
-            <ul class="tl-bullets">
-              <li>Trained 200+ undergraduates in Excel-based financial modeling, DCF valuation, budgeting, and FP&A reporting</li>
-              <li>Designed 12 finance assignments aligned to real-world FP&A and corporate finance workflows</li>
-            </ul>
-          </article>
-          <article class="tl-card">
-            <div class="tl-label gold">MBA Summer Internship</div>
-            <div class="tl-month">Jul 2024 to Aug 2024</div>
-            <div class="tl-date">Jul 2024 - Aug 2024</div>
-            <div class="tl-role">Financial Analyst Intern - Capital Projects</div>
-            <div class="tl-co">Hindustan Petroleum Corporation Limited</div>
-            <ul class="tl-bullets">
-              <li>Led investment appraisal for $10M+ capital projects using DCF, IRR/NPV, and scenario analysis</li>
-              <li>Automated SAP ERP financial reporting, reducing month-end cycle time by 25%</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-
-      <div class="tl-group med">
-        <div class="tl-side left"></div>
-        <div class="tl-spine"><div class="tl-year">2022</div><div class="tl-dot"></div><div class="tl-spine-line"></div></div>
-        <div class="tl-side right">
-          <article class="tl-card">
-            <div class="tl-label">FP&A / Capital Planning</div>
-            <div class="tl-date">Jul 2022 - Mar 2023</div>
-            <div class="tl-role">FP&A Analyst / Strategy & Capital Planning</div>
-            <div class="tl-co">Sri Sowdha Ventures - Private Investment & Development</div>
-            <div class="tl-ctx">Project-level investment analysis and budget-to-actual tracking across concurrent construction projects valued at $1.2M-$1.8M each.</div>
-            <ul class="tl-bullets">
-              <li>Identified $110K in cost savings through supplier renegotiations across 10+ vendors</li>
-              <li>Drove budget-to-actual variance analysis across 3-5 concurrent projects</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-
-      <div class="tl-group long">
-        <div class="tl-side left">
-          <div class="tl-duration">
-            <article class="tl-card">
-              <div class="tl-label gold">Commercial Finance</div>
-              <div class="tl-month">Starts Jan 2020, continues after Jun 2020 graduation</div>
-              <div class="tl-date">Jan 2020 - Jun 2022</div>
-              <div class="tl-role">Territory Executive / Commercial Finance</div>
-              <div class="tl-co">Rallis India Limited - Tata Enterprise</div>
-              <div class="tl-ctx">Revenue forecasting, A/R management, and pricing strategy across 50+ commercial accounts.</div>
-              <ul class="tl-bullets">
-                <li>Built territory revenue forecasts achieving ~95% accuracy</li>
-                <li>Reduced overdue A/R balances by 20% through aging analysis and collections management</li>
-              </ul>
-            </article>
-            <div class="tl-bracket" aria-label="Rallis duration from Jan 2020 to Jun 2022"><span class="start">Jun 2022</span><span class="end">Jan 2020</span></div>
-          </div>
-        </div>
-        <div class="tl-spine"><div class="tl-year">Jun 2022</div><div class="tl-dot"></div><div class="tl-spine-line"></div><div class="tl-year">2021</div><div class="tl-dot"></div><div class="tl-spine-line"></div><div class="tl-year">Jun 2020</div><div class="tl-dot"></div><div class="tl-spine-line"></div><div class="tl-year">Jan 2020</div><div class="tl-dot"></div><div class="tl-spine-line"></div></div>
-        <div class="tl-side right"></div>
-      </div>
-
-      <div class="tl-group xlong">
-        <div class="tl-side left">
-          <div class="tl-duration">
-            <article class="tl-card edu">
-              <div class="tl-label">Education</div>
-              <div class="tl-date">Jun 2016 - Jun 2020</div>
-              <div class="tl-role">Bachelor of Science</div>
-              <div class="tl-co">Centurion University of Technology and Management</div>
-              <div class="tl-ctx">Undergraduate foundation that overlaps with early finance experience in 2019 and ends at Jun 2020.</div>
-            </article>
-            <div class="tl-bracket" aria-label="Bachelor duration from Jun 2016 to Jun 2020"><span class="start">Jun 2020</span><span class="end">Jun 2016</span></div>
-          </div>
-        </div>
-        <div class="tl-spine"><div class="tl-year">Jun 2020</div><div class="tl-dot"></div><div class="tl-spine-line"></div><div class="tl-year">2019</div><div class="tl-dot"></div><div class="tl-spine-line"></div><div class="tl-year">Jun 2016</div><div class="tl-dot"></div></div>
-        <div class="tl-side right tl-substack low">
-          <article class="tl-card">
-            <div class="tl-label">Early Finance Experience</div>
-            <div class="tl-month">Jan 2019 to Dec 2019</div>
-            <div class="tl-date">Jan 2019 - Dec 2019</div>
-            <div class="tl-role">Financial Analyst</div>
-            <div class="tl-co">Sri Sowdha Ventures</div>
-            <div class="tl-ctx">Early finance role during the Bachelor's period, focused on analytical support for business planning and project economics.</div>
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="tl-scale" aria-label="Experience timeline from September 2025 to January 2020">
-      <div class="tl-year" style="top:0%"><div class="tl-year-dot"></div><span>2025</span></div>
-      <div class="tl-year" style="top:28%"><div class="tl-year-dot"></div><span>2024</span></div>
-      <div class="tl-year" style="top:52%"><div class="tl-year-dot"></div><span>2023</span></div>
-      <div class="tl-year" style="top:69%"><div class="tl-year-dot"></div><span>2022</span></div>
-      <div class="tl-year" style="top:84%"><div class="tl-year-dot"></div><span>2021</span></div>
-      <div class="tl-year" style="top:97%"><div class="tl-year-dot"></div><span>2020</span></div>
-
-      <article class="tl-card right current tl-pos-current">
-        <div class="tl-date">Sep 2025 - Present</div>
-        <div class="tl-role">Financial Analyst / FP&A & Reporting</div>
-        <div class="tl-co">Digital Factory - Data Analytics &amp; Location Intelligence</div>
-        <div class="tl-ctx">Built the FP&A function from scratch for a patented B2B data analytics platform, including rolling 12-month forecasts, P&amp;L/EBITDA reporting, headcount and SG&amp;A planning, executive KPI dashboards, and strategic finance models supporting a $2.5B growth strategy.</div>
-        <ul class="tl-bullets">
-          <li>Architected rolling 12-month forecasts, P&amp;L/EBITDA reporting, and headcount/SG&amp;A planning across 5+ business units; consolidated 20+ KPIs into Power BI executive dashboards.</li>
-          <li>Developed a 5-year strategic finance model for a $2.5B growth strategy, integrating revenue forecasts, customer growth drivers, DCF valuation, and 3-scenario sensitivity analysis to support fundraising, capital allocation, and long-range planning.</li>
-          <li>Established a dynamic sales finance model integrating HubSpot pipeline data, commission targets, and deal volume forecasts, standardizing monthly revenue forecasting, compensation tracking, and sales performance reviews across a 6-member sales team.</li>
-        </ul>
-        <div class="tl-tools"><span class="tl-tool">Excel</span><span class="tl-tool">Power BI</span><span class="tl-tool">Tableau</span><span class="tl-tool">DCF</span></div>
-      </article>
-
-      <article class="tl-card left tl-pos-ridge">
-        <div class="tl-date">Aug 2025 - Sep 2025</div>
-        <div class="tl-role">Deal Sourcing & Investment Analyst Intern</div>
-        <div class="tl-co">Ridgeview Holdings Group - Private Equity</div>
-        <div class="tl-ctx">Healthcare, tech, and essential services deal sourcing and early-stage due diligence for a $10M+ fund raise.</div>
-        <ul class="tl-bullets">
-          <li>Sourced and evaluated 150+ PE investment opportunities using DCF, IRR, and comparable company analysis</li>
-          <li>Prepared investment memos and due diligence reports supporting deal structuring decisions</li>
-        </ul>
-        <div class="tl-tools"><span class="tl-tool">DCF</span><span class="tl-tool">Comps</span><span class="tl-tool">IRR</span></div>
-      </article>
-
-      <article class="tl-card left mba tl-pos-mba">
-        <div class="tl-date">Apr 2023 - Jun 2025</div>
-        <div class="tl-role">MBA Finance - GPA 3.76/4.00</div>
-        <div class="tl-co">University of California, Riverside</div>
-        <div class="tl-ctx">Corporate Finance, Investments & Portfolio Management, Fixed Income, International Financial Management, and Spreadsheet Modeling.</div>
-        <div class="tl-overlap-wrap" aria-label="Concurrent MBA experiences">
-          <div class="tl-overlap-axis"></div>
-          <div class="tl-nested tl-pos-ta">
-            <div class="tl-nest-label">Concurrent with MBA</div>
-            <div class="tl-date">Apr 2024 - Jun 2025</div>
-            <div class="tl-role">Graduate Teaching Assistant - Finance</div>
-            <div class="tl-co">University of California, Riverside</div>
-            <ul class="tl-bullets">
-              <li>Trained 200+ undergraduates in Excel-based financial modeling, DCF valuation, budgeting, and FP&A reporting</li>
-              <li>Designed 12 finance assignments aligned to real-world FP&A and corporate finance workflows</li>
-            </ul>
-          </div>
-          <div class="tl-nested short tl-pos-hpcl">
-            <div class="tl-nest-label">MBA summer internship</div>
-            <div class="tl-date">Jul 2024 - Aug 2024</div>
-            <div class="tl-role">Financial Analyst Intern, Capital Projects</div>
-            <div class="tl-co">HPCL - Energy capital projects</div>
-            <ul class="tl-bullets">
-              <li>Led investment appraisal for $10M+ capital projects using DCF, IRR/NPV, and scenario analysis</li>
-              <li>Automated SAP ERP financial reporting, reducing month-end cycle time by 25%</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="tl-card right tl-pos-sri">
-        <div class="tl-date">Jul 2022 - Mar 2023</div>
-        <div class="tl-role">FP&A Analyst / Capital Planning</div>
-        <div class="tl-co">Sri Sowdha Ventures - Private Investment & Development</div>
-        <div class="tl-ctx">Project-level investment analysis and budget-to-actual tracking across concurrent construction projects valued at $1.2M-$1.8M each.</div>
-        <ul class="tl-bullets">
-          <li>Identified $110K in cost savings during COVID-driven material cost escalation via supplier renegotiations across 10+ vendors</li>
-          <li>Drove budget-to-actual variance analysis across 3-5 concurrent projects to support cash flow replanning</li>
-        </ul>
-        <div class="tl-tools"><span class="tl-tool">Excel</span><span class="tl-tool">DCF</span><span class="tl-tool">Variance Analysis</span></div>
-      </article>
-
-      <article class="tl-card left tl-pos-rallis">
-        <div class="tl-date">Jan 2020 - Jun 2022</div>
-        <div class="tl-role">Territory Executive / Commercial Finance</div>
-        <div class="tl-co">Rallis India Limited (Tata Enterprise) - Agrochemicals</div>
-        <div class="tl-ctx">Revenue forecasting, A/R management, and pricing strategy across 50+ commercial accounts.</div>
-        <ul class="tl-bullets">
-          <li>Built territory revenue forecasts achieving ~95% accuracy; converted ~$240K underperforming revenue through pricing and account restructuring</li>
-          <li>Reduced overdue A/R balances by 20% through aging analysis and collections management</li>
-        </ul>
-        <div class="tl-tools"><span class="tl-tool">Excel</span><span class="tl-tool">SAP ERP</span><span class="tl-tool">A/R Analysis</span></div>
-      </article>
-    </div>
+    
 
     <!-- ROW 1: Rallis - LEFT -->
-    <div class="tl-row">
-      <div class="tl-card left">
-        <div class="tl-date">JAN 2020 – JUN 2022</div>
-        <div class="tl-role">Territory Executive - Commercial Finance</div>
-        <div class="tl-co">Rallis India Limited (Tata Enterprise) · Agrochemicals</div>
-        <div class="tl-ctx">Revenue forecasting, A/R management, and pricing strategy across 50+ commercial accounts.</div>
-        <ul class="tl-bullets">
-          <li>Built territory revenue forecasts achieving ~95% accuracy; converted ~$240K underperforming revenue through pricing and account restructuring</li>
-          <li>Reduced overdue A/R balances by 20% through aging analysis and collections management</li>
-        </ul>
-        <div class="tl-tools"><span class="tl-tool">Excel</span><span class="tl-tool">SAP ERP</span><span class="tl-tool">A/R Analysis</span></div>
-      </div>
-      <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
-      <div class="tl-empty"></div>
-    </div>
+    
 
     <!-- ROW 2: Sri Sowdha - RIGHT -->
-    <div class="tl-row">
-      <div class="tl-empty"></div>
-      <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
-      <div class="tl-card right">
-        <div class="tl-date">JUL 2022 – MAR 2023</div>
-        <div class="tl-role">FP&A Analyst - Capital Planning</div>
-        <div class="tl-co">Sri Sowdha Ventures · Private Investment & Development</div>
-        <div class="tl-ctx">Project-level investment analysis and budget-to-actual tracking across concurrent construction projects valued at $1.2M–$1.8M each.</div>
-        <ul class="tl-bullets">
-          <li>Identified $110K in cost savings during COVID-driven material cost escalation via supplier renegotiations across 10+ vendors</li>
-          <li>Drove budget-to-actual variance analysis across 3–5 concurrent projects to support cash flow replanning</li>
-        </ul>
-        <div class="tl-tools"><span class="tl-tool">Excel</span><span class="tl-tool">DCF</span><span class="tl-tool">Variance Analysis</span></div>
-      </div>
-    </div>
+    
 
     <!-- ROW 3: MBA - LEFT (parent block) -->
-    <div class="tl-row">
-      <div class="tl-card left" style="border-color:rgba(77,214,142,0.22)">
-        <div class="tl-date">APR 2023 – JUN 2025</div>
-        <div class="tl-role">MBA Finance · GPA 3.76/4.00</div>
-        <div class="tl-co">University of California, Riverside</div>
-        <div class="tl-ctx">Corporate Finance · Investments & Portfolio Management · Fixed Income · International Financial Management · Spreadsheet Modeling</div>
-      </div>
-      <div class="tl-dot-col"><div class="tl-dot green"></div><div class="tl-line"></div></div>
-      <div class="tl-empty"></div>
-    </div>
+    
 
     <!-- ROW 4: HPCL - RIGHT (nested inside MBA) -->
-    <div class="tl-row">
-      <div class="tl-empty"></div>
-      <div class="tl-dot-col" style="padding-top:14px"><div class="tl-dot" style="width:9px;height:9px;background:var(--gold3);border-color:var(--navy2)"></div><div class="tl-line"></div></div>
-      <div class="tl-card nest right">
-        <div class="tl-nest-label">↳ MBA SUMMER INTERNSHIP</div>
-        <div class="tl-date">JUL – AUG 2024</div>
-        <div class="tl-role">Financial Analyst Intern, Capital Projects</div>
-        <div class="tl-co">Hindustan Petroleum Corporation Limited (HPCL) · India's 2nd-largest state oil company</div>
-        <ul class="tl-bullets">
-          <li>Led investment appraisal for $10M+ capital projects using DCF, IRR/NPV, and scenario analysis. Recommendations were adopted by project leadership</li>
-          <li>Automated SAP ERP financial reporting and month-end close, reducing cycle time by 25%</li>
-        </ul>
-        <div class="tl-tools"><span class="tl-tool">DCF</span><span class="tl-tool">IRR/NPV</span><span class="tl-tool">SAP ERP</span></div>
-      </div>
-    </div>
+    
 
     <!-- ROW 5: TA - LEFT (nested inside MBA) -->
-    <div class="tl-row">
-      <div class="tl-card nest left">
-        <div class="tl-nest-label">↳ CONCURRENT WITH MBA</div>
-        <div class="tl-date">APR 2024 – JUN 2025</div>
-        <div class="tl-role">Graduate Teaching Assistant, Finance</div>
-        <div class="tl-co">University of California, Riverside</div>
-        <ul class="tl-bullets">
-          <li>Trained 200+ undergraduates in Excel-based financial modeling, DCF valuation, budgeting, and FP&A reporting</li>
-          <li>Designed 12 finance assignments aligned to real-world FP&A and corporate finance workflows</li>
-        </ul>
-        <div class="tl-tools"><span class="tl-tool">Excel</span><span class="tl-tool">DCF</span><span class="tl-tool">FP&A</span></div>
-      </div>
-      <div class="tl-dot-col" style="padding-top:14px"><div class="tl-dot" style="width:9px;height:9px;background:var(--gold3);border-color:var(--navy2)"></div><div class="tl-line"></div></div>
-      <div class="tl-empty"></div>
-    </div>
+    
 
     <!-- ROW 6: Ridgeview - RIGHT (post-graduation) -->
-    <div class="tl-row">
-      <div class="tl-empty"></div>
-      <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
-      <div class="tl-card right">
-        <div class="tl-date">AUG – SEP 2025</div>
-        <div class="tl-role">Deal Sourcing & Investment Analyst (Intern)</div>
-        <div class="tl-co">Ridgeview Holdings Group · Private Equity</div>
-        <div class="tl-ctx">Healthcare, tech, and essential services deal sourcing and early-stage due diligence for a $10M+ fund raise.</div>
-        <ul class="tl-bullets">
-          <li>Sourced and evaluated 150+ PE investment opportunities using DCF, IRR, and comparable company analysis</li>
-          <li>Prepared investment memos and due diligence reports supporting deal structuring decisions</li>
-        </ul>
-        <div class="tl-tools"><span class="tl-tool">DCF</span><span class="tl-tool">Comps</span><span class="tl-tool">IRR</span></div>
-      </div>
-    </div>
+    
 
     <!-- ROW 7: Digital Factory - LEFT (current) -->
-    <div class="tl-row">
-      <div class="tl-card left" style="border-color:rgba(201,168,76,0.28)">
-        <div class="tl-date">SEP 2025 – PRESENT</div>
-        <div class="tl-role">Financial Analyst, FP&A & Reporting</div>
-        <div class="tl-co">Digital Factory · Data Analytics &amp; Location Intelligence</div>
-        <div class="tl-ctx">Built the FP&A function from scratch for a patented B2B data analytics platform, including rolling 12-month forecasts, P&amp;L/EBITDA reporting, headcount and SG&amp;A planning, executive KPI dashboards, and strategic finance models supporting a $2.5B growth strategy.</div>
-        <ul class="tl-bullets">
-          <li>Architected rolling 12-month forecasts, P&amp;L/EBITDA reporting, and headcount/SG&amp;A planning across 5+ business units; consolidated 20+ KPIs into Power BI executive dashboards.</li>
-          <li>Developed a 5-year strategic finance model for a $2.5B growth strategy, integrating revenue forecasts, customer growth drivers, DCF valuation, and 3-scenario sensitivity analysis to support fundraising, capital allocation, and long-range planning.</li>
-          <li>Established a dynamic sales finance model integrating HubSpot pipeline data, commission targets, and deal volume forecasts, standardizing monthly revenue forecasting, compensation tracking, and sales performance reviews across a 6-member sales team.</li>
-        </ul>
-        <div class="tl-tools"><span class="tl-tool">Excel</span><span class="tl-tool">Power BI</span><span class="tl-tool">Tableau</span><span class="tl-tool">DCF</span></div>
-      </div>
-      <div class="tl-dot-col"><div class="tl-dot bright"></div></div>
-      <div class="tl-empty"></div>
-    </div>
+    
 
   </div><!-- /tl-outer -->
 </div>
@@ -1404,7 +726,7 @@ button.fbtn,
         <div class="proj-tools"><span class="ptool">Excel</span><span class="ptool">Power Query</span><span class="ptool">Power BI</span><span class="ptool">DAX</span></div>
       </div>
       <div class="proj-body">
-        <div class="proj-what">End-to-end FP&A portfolio project for an illustrative B2B SaaS company (~$78M FY2025 revenue). Built a 13-tab driver-based Excel model with single-source assumptions feeding monthly revenue, ARR waterfall, P&amp;L through EBITDA, rolling forecast, budget-vs-actual variance, four-case scenario engine, five-year long-range plan, and SaaS KPI suite including Rule of 40, NRR, CAC payback, and LTV. Extended the model into a 4-page Power BI executive dashboard covering FY2025 performance, FY2026 scenario planning, revenue shock what-if analysis, and SaaS health metrics. 4,700+ interlinked formulas, Power Query transformations, DAX measures, and dynamic management commentary.</div>
+        <div class="proj-what">End-to-end FP&A portfolio project for an illustrative B2B SaaS company (~$78M FY2025 revenue). Built a 13-tab driver-based Excel model with single-source assumptions feeding monthly revenue, ARR waterfall, P&amp;L through EBITDA, rolling forecast, budget-vs-actual variance, four-case scenario engine, five-year long-range plan, and SaaS KPI suite including Rule of 40, NRR, CAC payback, and LTV:CAC. Extended the model into a 4-page Power BI executive dashboard covering FY2025 performance, FY2026 scenario planning, revenue shock what-if analysis, and SaaS health metrics. 4,700+ interlinked formulas, Power Query transformations, DAX measures, and dynamic management commentary.</div>
         <div class="proj-takeaway">Excel · Power Query · Power BI · DAX · FP&A · SaaS metrics · scenario analysis · financial modeling</div>
         <div class="proj-btns">
           <a href="https://drive.google.com/drive/folders/143VXrGujbdeuLh1M5yKPCz2qvDFAhWHj?usp=drive_link" class="pbtn p" target="_blank" rel="noopener noreferrer">View Project</a>
@@ -1438,13 +760,13 @@ button.fbtn,
 <div class="si">
   <div class="stag">Technical depth</div>
   <h2 class="sh">Finance <em>Toolkit</em></h2>
-  <p class="sdesc">The tools I use daily and what I actually build with them.</p>
+  <p class="sdesc">Tools I use across financial modeling, reporting, dashboards, and analysis.</p>
   <div class="tk-grid">
     <div class="tk-card"><div class="tk-ico">📊</div><div class="tk-name">Advanced Excel</div><div class="tk-desc">Forecasting models, budget vs actuals, DCF/IRR/NPV, scenario analysis, sensitivity tables, Power Query, Power Pivot, XLOOKUP, INDEX-MATCH, SUMIFS, Solver.</div></div>
     <div class="tk-card"><div class="tk-ico">📱</div><div class="tk-name">Power BI</div><div class="tk-desc">Executive KPI dashboards, DAX measures, data modeling across multiple sources, drill-down filters, month-end and MBR reporting delivery.</div></div>
     <div class="tk-card"><div class="tk-ico">📉</div><div class="tk-name">Tableau</div><div class="tk-desc">Visual performance dashboards, KPI storytelling, cross-functional reporting, pipeline and revenue trend visualization.</div></div>
-    <div class="tk-card"><div class="tk-ico">⚙</div><div class="tk-name">SAP ERP</div><div class="tk-desc">Financial reporting extraction, month-end close, capital project data structure, audit readiness, reporting automation (−25% cycle time at HPCL).</div></div>
-    <div class="tk-card"><div class="tk-ico">🔍</div><div class="tk-name">SQL</div><div class="tk-desc">Data extraction from finance datasets, joining transaction tables, validating dashboard inputs, querying KPI and pipeline data for Power BI.</div></div>
+    <div class="tk-card"><div class="tk-ico">⚙</div><div class="tk-name">SAP ERP (Foundational)</div><div class="tk-desc">Worked with SAP ERP data for capital-project reporting and A/R and order tracking, alongside standardized Excel reporting templates.</div></div>
+    <div class="tk-card"><div class="tk-ico">🔍</div><div class="tk-name">SQL (Foundational)</div><div class="tk-desc">Foundational knowledge of querying, filtering, joining, and validating financial data for reporting and dashboards.</div></div>
     <div class="tk-card"><div class="tk-ico">🗃</div><div class="tk-name">PowerPoint</div><div class="tk-desc">Executive MBR decks, board-style investment summaries, variance commentary, Go/No-Go recommendation decks.</div></div>
   </div>
 </div>
@@ -1462,7 +784,7 @@ button.fbtn,
     <div class="think-card"><div class="think-lbl">VARIANCE ANALYSIS</div><div class="think-title">Separate noise from signal</div><div class="think-desc">I identify whether a variance came from volume, price, mix, timing, labor, or supply cost, so leadership knows what to act on.</div></div>
     <div class="think-card"><div class="think-lbl">FINANCIAL MODELING</div><div class="think-title">Build for decision-makers</div><div class="think-desc">Models need to be assumption-driven, clearly structured, and readable by non-finance leadership or they don't get used.</div></div>
     <div class="think-card"><div class="think-lbl">DASHBOARDING</div><div class="think-title">Answer the question first</div><div class="think-desc">I design dashboards around the questions leadership asks every month, not around all the data that happens to be available.</div></div>
-    <div class="think-card"><div class="think-lbl">CAPITAL PLANNING</div><div class="think-title">Evaluate through risk</div><div class="think-desc">The return matters less than understanding what has to go right for it to be true cash flows, IRR, payback, and sensitivity.</div></div>
+    <div class="think-card"><div class="think-lbl">CAPITAL PLANNING</div><div class="think-title">Evaluate through risk</div><div class="think-desc">A projected return is only useful when its assumptions hold. I test cash flows, IRR, payback, and sensitivity to understand downside risk and the key drivers behind it.</div></div>
     <div class="think-card"><div class="think-lbl">BUSINESS PARTNERING</div><div class="think-title">Translate numbers into decisions</div><div class="think-desc">Finance becomes a planning partner, not a reporting function, when it connects financial results to practical operational choices.</div></div>
   </div>
 </div>
@@ -1510,7 +832,7 @@ button.fbtn,
       <a href="https://calendar.app.google/4nPzZkZxuHpne2iVA" class="btn-p" target="_blank" rel="noopener noreferrer">Book 15-Min Intro Call</a>
       <a href="mailto:sowjanya.dulipala001@gmail.com" class="btn-o">Email Me</a>
       <a href="https://www.linkedin.com/in/sowjanyadulipala/" class="btn-o" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://drive.google.com/drive/folders/1OdOHKE3XHNh-TaUhQtGdM3-8NRBGO0b8?usp=drive_link" class="btn-g" target="_blank" rel="noopener noreferrer">View Resume</a>
+      <a href="https://drive.google.com/uc?export=download&id=1OdOHKE3XHNh-TaUhQtGdM3-8NRBGO0b8" class="btn-g" target="_blank" rel="noopener noreferrer">View Resume</a>
     </div>
 
     <div class="contact-section-label">Quick Contact</div>
@@ -1529,7 +851,7 @@ button.fbtn,
   <div class="flinks">
     <a href="mailto:sowjanya.dulipala001@gmail.com">Email</a>
     <a href="https://www.linkedin.com/in/sowjanyadulipala/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a href="https://drive.google.com/drive/folders/1OdOHKE3XHNh-TaUhQtGdM3-8NRBGO0b8?usp=drive_link" target="_blank" rel="noopener noreferrer">View Resume</a>
+    <a href="https://drive.google.com/uc?export=download&id=1OdOHKE3XHNh-TaUhQtGdM3-8NRBGO0b8" target="_blank" rel="noopener noreferrer">View Resume</a>
     <a href="https://calendar.app.google/4nPzZkZxuHpne2iVA" target="_blank" rel="noopener noreferrer">Intro Call</a>
   </div>
   <div class="fcopy">© 2026 Sowjanya Dulipala · Finance Portfolio</div>
